@@ -1,0 +1,60 @@
+@keyframes scroll {
+  from {
+    opacity: 0;
+    scale: 0.5;
+  }
+  to {
+    scale: 1;
+    opacity: 1;
+  }
+}
+
+.pages123 {
+  animation: scroll linear;
+  animation-timeline: view();
+  animation-range: entry 0 cover 40%;
+}
+
+@keyframes left-right {
+  from {
+    translate: 100%;
+  }
+  to {
+    translate: 0;
+  }
+}
+
+.transition_of_charts {
+  overflow: hidden;
+  animation: left-right 1s linear;
+}
+
+@keyframes left-right2 {
+  from {
+    translate: 100%;
+  }
+  to {
+    translate: 0;
+  }
+}
+
+
+.transition_of_charts2 {
+  overflow: hidden;
+  animation: left-right2 1s linear;
+}
+
+@keyframes left-right3 {
+  from {
+    translate: 100%;
+  }
+  to {
+    translate: 0;
+  }
+}
+
+
+.transition_of_charts3 {
+  overflow: hidden;
+  animation: left-right3 1s linear;
+}
