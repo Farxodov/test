@@ -8,7 +8,7 @@ import {
   Tooltip,
   Legend,
 } from "recharts";
-function Page1({ data }) {
+function Page6({ data }) {
   return (
     <>
       <ResponsiveContainer width="100%" height="100%">
@@ -18,8 +18,20 @@ function Page1({ data }) {
           <CartesianGrid strokeDasharray={"2 2"} />
           <Tooltip content={<CustomTooltip />} />
           <Legend />
-          <Area dataKey={"value1"} stroke="red" fill="red" />
-          <Area dataKey={"value2"} stroke="blue" fill="blue" />
+          <Area
+            type={"monotone"}
+            dataKey={"value1"}
+            stroke="red"
+            fill="red"
+            stackId={1}
+          />
+          <Area
+            type={"monotone"}
+            dataKey={"value2"}
+            stroke="blue"
+            fill="blue"
+            stackId={1}
+          />
         </AreaChart>
       </ResponsiveContainer>
     </>
@@ -39,9 +51,13 @@ const CustomTooltip = ({ active, payload, label }) => {
           Product2:
           <span className="ml-2">{payload[1].value}$</span>
         </p>
+        <p className="text-green-400">
+            All:
+            <span className="ml-2">{payload[0].value + payload[1].value}$</span>
+        </p>
       </div>
     );
   }
 };
 
-export default Page1;
+export default Page6;

@@ -4,6 +4,8 @@ import Page3 from "./Page3";
 import "../../CSS/Pages.css";
 import { useState } from "react";
 import Page4 from "./Page4";
+import Page5 from "./Page5";
+import Page6 from "./Page6";
 function Pages() {
   const data = [
     {
@@ -44,7 +46,7 @@ function Pages() {
   ];
 
   const [number, setNumber] = useState(1);
-  const number_of_charts = 4;
+  const number_of_charts = 6;
 
   function click(p) {
     if (p === "minus") {
@@ -64,7 +66,7 @@ function Pages() {
 
   return (
     <>
-     <div className="flex justify-around">
+      <div className="flex justify-around">
         <button
           onClick={() => click("minus")}
           className="bg-white rounded-full p-1"
@@ -82,14 +84,10 @@ function Pages() {
           onClick={() => click("plus")}
           className="bg-white rounded-full p-1"
         >
-          <img
-            className="w-6 h-6"
-            src="./images/next.png"
-            alt="next"
-          />
+          <img className="w-6 h-6" src="./images/next.png" alt="next" />
         </button>
       </div>
-       {  true ? " " :""}
+      {true ? " " : ""}
       <br />
       <div className="w-full">
         {number == 1 ? (
@@ -104,11 +102,20 @@ function Pages() {
           <div className="w-[80%] m-auto h-[400px]">
             <Page3 data={data} />
           </div>
-        ) : number == 4? (
-          <Page4 data={data} />
-        ) : "" }
+        ) : number == 4 ? (
+          <div className="w-[80%] m-auto h-[400px]">
+            <Page4 data={data} />
+          </div>
+        ) : number == 5 ? (
+          <div className="w-[80%] m-auto h-[400px]">
+            <Page5 data={data} />
+          </div>
+        ) : number == 6 ? (
+          <div className="w-[80%] m-auto h-[400px]">
+            <Page6 data={data} />
+          </div>
+        ) :"" }
       </div>
-     
     </>
   );
 }
