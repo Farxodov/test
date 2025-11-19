@@ -31,7 +31,7 @@ function Header() {
               setIsHoveredS(false);
             }}
             className="brightness-0 invert-[1]"
-            src="../../../public/images/bank.png"
+            src="./images/bank.png"
             alt="bank logo"
           />
           <ul className="text-gray-300 text-[13px] font-extralight flex justify-between items-center gap-5">
