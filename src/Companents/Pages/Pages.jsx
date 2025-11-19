@@ -71,7 +71,7 @@ function Pages() {
         >
           <img
             className="w-6 h-6 rotate-180"
-            src="../../../public/images/next.png"
+            src="./images/next.png"
             alt="next"
           />
         </button>
@@ -84,11 +84,12 @@ function Pages() {
         >
           <img
             className="w-6 h-6"
-            src="../../../public/images/next.png"
+            src="./images/next.png"
             alt="next"
           />
         </button>
       </div>
+       {  true ? " " :""}
       <br />
       <div className="w-full">
         {number == 1 ? (
