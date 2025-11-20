@@ -58,10 +58,15 @@ function Pages() {
     if (!localStorage.getItem("color1") && !localStorage.getItem("color2")) {
       setColor1("blue");
       setColor1("red");
-      localStorage.setItem("color1", ["blue"]);
-      localStorage.setItem("color2", ["red"]);
+      localStorage.setItem("color1", "blue");
+      localStorage.setItem("color2", "red");
+      setTimeout(()=>{
+        window.location.reload();
+      },50)
     }
   }, []);
+
+  useEffect(() => {});
 
   function click(p) {
     if (p === "minus") {
@@ -119,6 +124,7 @@ function Pages() {
           </label>
           <select
             onChange={handleChange}
+            value={number}
             id="keys"
             className="w-[50px] bg-gray-900 text-white rounded-md border border-gray-700 focus:outline-none focus:ring-2 focus:ring-purple-500 transition-all"
           >
