@@ -46,23 +46,18 @@ function Pages() {
   ];
 
   const [number, setNumber] = useState(1);
-  const [color1, setColor1] = useState(
-    !localStorage.getItem("color1") ? "blue" : localStorage.getItem("color1")
-  );
-  const [color2, setColor2] = useState(
-    !localStorage.getItem("color2") ? "red" : localStorage.getItem("color2")
-  );
+  const [color1, setColor1] = useState(localStorage.getItem("color1"));
+  const [color2, setColor2] = useState(localStorage.getItem("color2"));
   const number_of_charts = 6;
 
   useEffect(() => {
     if (!localStorage.getItem("color1") && !localStorage.getItem("color2")) {
       setColor1("blue");
       setColor1("red");
-      localStorage.setItem("color1", "blue");
-      localStorage.setItem("color2", "red");
-      setTimeout(()=>{
-        window.location.reload();
-      },50)
+      localStorage.setItem("color1", "#ff0000");
+      localStorage.setItem("color2", "#00ff00");
+      setColor1("#ff0000");
+      setColor2("#00ff00");
     }
   }, []);
 
