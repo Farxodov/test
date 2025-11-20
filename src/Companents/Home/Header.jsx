@@ -3,7 +3,7 @@ import Undereheader from "./Underheader";
 import "../../CSS/Header.css";
 import Undereheader_s from "./Underheader_s";
 import { useTranslation } from "react-i18next";
-
+import bankLogo from "../../../public/images/bank.png"
 function Header() {
   const [isHovered, setIsHovered] = useState([false], "");
   const [isHoveredS, setIsHoveredS] = useState(false);
@@ -30,7 +30,7 @@ function Header() {
               setIsHoveredS(false);
             }}
             className="brightness-0 invert-[1]"
-            src="./images/bank.png"
+            src={bankLogo}
             alt="bank logo"
           />
           <ul className="text-gray-300 text-[13px] font-extralight flex justify-between items-center gap-5">

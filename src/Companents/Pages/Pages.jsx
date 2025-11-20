@@ -1,12 +1,14 @@
+import "../../CSS/Pages.css";
+import { useEffect, useState } from "react";
 import Page1 from "./Page1";
 import Page2 from "./Page2";
 import Page3 from "./Page3";
-import "../../CSS/Pages.css";
-import { useEffect, useState } from "react";
 import Page4 from "./Page4";
 import Page5 from "./Page5";
 import Page6 from "./Page6";
 import Page7 from "./Page7";
+import directionLogo from "../../../public/images/next.png";
+
 function Pages() {
   const data = [
     {
@@ -102,11 +104,7 @@ function Pages() {
           onClick={() => click("minus")}
           className="bg-white rounded-full p-1"
         >
-          <img
-            className="w-6 h-6 rotate-180"
-            src="./images/next.png"
-            alt="next"
-          />
+          <img className="w-6 h-6 rotate-180" src={directionLogo} alt="next" />
         </button>
         <h1 className="text-white">
           Chart:{number}/{number_of_charts}
@@ -130,8 +128,10 @@ function Pages() {
               </option>
             ))}
           </select>
-          {
-            number==7?"":<>
+          {number == 7 ? (
+            ""
+          ) : (
+            <>
               <input
                 onChange={(p) => color([true, p])}
                 type="color"
@@ -147,13 +147,13 @@ function Pages() {
                 className={`w-[30px] h-[30px] rounded-full border-2 border-gray-700 cursor-pointer shadow-lg transition-transform hover:scale-110`}
               />
             </>
-          }
+          )}
         </div>
         <button
           onClick={() => click("plus")}
           className="bg-white rounded-full p-1"
         >
-          <img className="w-6 h-6" src="./images/next.png" alt="next" />
+          <img className="w-6 h-6" src={directionLogo} alt="next" />
         </button>
       </div>
       {true ? " " : ""}
@@ -183,14 +183,13 @@ function Pages() {
           <div className="w-[80%] m-auto h-[400px]">
             <Page6 data={data} color={[color1, color2]} />
           </div>
-        ) : number == 7 ?(
+        ) : number == 7 ? (
           <div className="w-[80%] m-auto flex justify-center items-center flex-col h-[400px]">
-            <Page7/>
+            <Page7 />
           </div>
-        ) 
-        :
+        ) : (
           ""
-        }
+        )}
       </div>
     </>
   );
