@@ -6,6 +6,7 @@ import { useEffect, useState } from "react";
 import Page4 from "./Page4";
 import Page5 from "./Page5";
 import Page6 from "./Page6";
+import Page7 from "./Page7";
 function Pages() {
   const data = [
     {
@@ -48,7 +49,7 @@ function Pages() {
   const [number, setNumber] = useState(1);
   const [color1, setColor1] = useState(localStorage.getItem("color1"));
   const [color2, setColor2] = useState(localStorage.getItem("color2"));
-  const number_of_charts = 6;
+  const number_of_charts = 7;
 
   useEffect(() => {
     if (!localStorage.getItem("color1") && !localStorage.getItem("color2")) {
@@ -129,20 +130,24 @@ function Pages() {
               </option>
             ))}
           </select>
-          <input
-            onChange={(p) => color([true, p])}
-            type="color"
-            value={color1}
-            style={{ background: color1 }}
-            className={`w-[30px] h-[30px] rounded-full border-2 border-gray-700 cursor-pointer shadow-lg transition-transform hover:scale-110`}
-          />
-          <input
-            onChange={(p) => color([false, p])}
-            type="color"
-            value={color2}
-            style={{ background: color2 }}
-            className={`w-[30px] h-[30px] rounded-full border-2 border-gray-700 cursor-pointer shadow-lg transition-transform hover:scale-110`}
-          />
+          {
+            number==7?"":<>
+              <input
+                onChange={(p) => color([true, p])}
+                type="color"
+                value={color1}
+                style={{ background: color1 }}
+                className={`w-[30px] h-[30px] rounded-full border-2 border-gray-700 cursor-pointer shadow-lg transition-transform hover:scale-110`}
+              />
+              <input
+                onChange={(p) => color([false, p])}
+                type="color"
+                value={color2}
+                style={{ background: color2 }}
+                className={`w-[30px] h-[30px] rounded-full border-2 border-gray-700 cursor-pointer shadow-lg transition-transform hover:scale-110`}
+              />
+            </>
+          }
         </div>
         <button
           onClick={() => click("plus")}
@@ -178,9 +183,14 @@ function Pages() {
           <div className="w-[80%] m-auto h-[400px]">
             <Page6 data={data} color={[color1, color2]} />
           </div>
-        ) : (
+        ) : number == 7 ?(
+          <div className="w-[80%] m-auto flex justify-center items-center flex-col h-[400px]">
+            <Page7/>
+          </div>
+        ) 
+        :
           ""
-        )}
+        }
       </div>
     </>
   );

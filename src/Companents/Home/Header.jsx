@@ -14,7 +14,6 @@ function Header() {
     setIsHoveredS(false);
   }
 
-
   return (
     <div className="w-screen bg-[#1D1D1F] ">
       <div
@@ -42,64 +41,64 @@ function Header() {
               {t("header").first}
             </li>
             <li
-              onMouseEnter={() => fHover("Mac")}
+              onMouseEnter={() => fHover("Smth1")}
               className="hover:underline hover:scale-[1.05] transition-all "
             >
-              Mac
+              Smth1
             </li>
             <li
-              onMouseEnter={() => fHover("iPad")}
+              onMouseEnter={() => fHover("smth2")}
               className="hover:underline hover:scale-[1.05] transition-all"
             >
-              iPad
+              smth2
             </li>
             <li
-              onMouseEnter={() => fHover("Iphone")}
+              onMouseEnter={() => fHover("smth3")}
               className="hover:underline hover:scale-[1.05] transition-all"
             >
-              Iphone
+              smth3
             </li>
             <li
-              onMouseEnter={() => fHover("Watch")}
+              onMouseEnter={() => fHover("smth4")}
               className="hover:underline hover:scale-[1.05] transition-all"
             >
-              Watch
+              smth4
             </li>
             <li
-              onMouseEnter={() => fHover("Vision")}
+              onMouseEnter={() => fHover("smth5")}
               className="hover:underline hover:scale-[1.05] transition-all"
             >
-              Vision
+              smth5
             </li>
             <li
-              onMouseEnter={() => fHover("AirPods")}
+              onMouseEnter={() => fHover("smth6")}
               className="hover:underline hover:scale-[1.05] transition-all"
             >
-              AirPods
+              smth6
             </li>
             <li
-              onMouseEnter={() => fHover("TV_Home")}
+              onMouseEnter={() => fHover("smth7")}
               className="hover:underline hover:scale-[1.05] transition-all"
             >
-              TV & Home
+              smth7
             </li>
             <li
-              onMouseEnter={() => fHover("Entertainment")}
+              onMouseEnter={() => fHover("smth8")}
               className="hover:underline hover:scale-[1.05] transition-all"
             >
-              Entertainment
+              smth8
             </li>
             <li
-              onMouseEnter={() => fHover("Accessories")}
+              onMouseEnter={() => fHover("smth9")}
               className="hover:underline hover:scale-[1.05] transition-all"
             >
-              Accessories
+              smth9
             </li>
             <li
-              onMouseEnter={() => fHover("Support")}
+              onMouseEnter={() => fHover("smth10")}
               className="hover:underline hover:scale-[1.05] transition-all"
             >
-              Support
+              smth10
             </li>
           </ul>
           <svg
