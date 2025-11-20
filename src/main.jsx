@@ -3,7 +3,10 @@ import { createRoot } from "react-dom/client";
 import "./CSS/index.css";
 import App from "./App.jsx";
 import { BrowserRouter } from "react-router-dom";
-import "./i18n.js";
+import i18next from "i18next";
+
+
+
 
 createRoot(document.getElementById("root")).render(
   <div>
@@ -14,3 +17,4 @@ createRoot(document.getElementById("root")).render(
     </StrictMode>
   </div>
 );
+

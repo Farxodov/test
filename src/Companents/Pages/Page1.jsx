@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import {
   AreaChart,
   Area,
@@ -8,7 +9,9 @@ import {
   Tooltip,
   Legend,
 } from "recharts";
-function Page1({ data }) {
+let colors;
+function Page1({ data, color }) {
+  colors=color
   return (
     <>
       <ResponsiveContainer width="100%" height="100%">
@@ -18,8 +21,8 @@ function Page1({ data }) {
           <CartesianGrid strokeDasharray={"2 2"} />
           <Tooltip content={<CustomTooltip />} />
           <Legend />
-          <Area dataKey={"value1"} stroke="red" fill="red" />
-          <Area dataKey={"value2"} stroke="blue" fill="blue" />
+          <Area dataKey={"value1"} stroke={color[0]} fill={color[0]} />
+          <Area dataKey={"value2"} stroke={color[1]} fill={color[1]} />
         </AreaChart>
       </ResponsiveContainer>
     </>
@@ -28,16 +31,17 @@ function Page1({ data }) {
 
 const CustomTooltip = ({ active, payload, label }) => {
   if (active && payload && payload.length) {
+    
     return (
       <div className="p-4 bg-slate-900 flex flex-col gap-4 rounded-md">
         <p className="text-medium text-lg text-amber-50">{label}</p>
-        <p className="text-sm text-red-400">
+        <p style={{ color: colors[0] }} className={`text-sm`}>
           Product1:
           <span className="ml-2">{payload[0].value}$</span>
         </p>
-        <p className="text-sm text-blue-400">
+        <p style={{ color: colors[1] }} className={`text-sm`}>
           Product2:
-          <span className="ml-2">{payload[1].value}$</span>
+          <span  className="ml-2">{payload[1].value}$</span>
         </p>
       </div>
     );
