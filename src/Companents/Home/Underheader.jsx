@@ -3,13 +3,16 @@ import { useEffect, useState } from "react"
 
 function Undereheader({params}) {
     const [render,setRender] = useState("navbar1")
-    
+    const [number,setNumber] = useState()
     useEffect(()=>{
         setRender("")
         setTimeout(()=>{
-            setRender("navbar1")
-        },10)
+            setRender("navbar1"+"")
+        },50)
+        setNumber(localStorage.getItem("number"))
     },params)
+
+    
 
     return(
         <> 
@@ -20,10 +23,7 @@ function Undereheader({params}) {
                 <hr className="text-white" />
                 <br />
                 <ul className="text-white">
-                    <li>Obj from server</li>
-                    <li>Obj from server</li>
-                    <li>Obj from server</li>
-                    <li>Obj from server</li>
+                    
                 </ul>
             </div>
             

@@ -4,12 +4,12 @@ import "../../CSS/Header.css";
 import Undereheader_s from "./Underheader_s";
 import { useTranslation } from "react-i18next";
 import bankLogo from "../../../public/images/bank.png"
-import { Link, Navigate, useParams } from "react-router-dom";
+import { Link, Navigate, useNavigate, useParams } from "react-router-dom";
 function Header() {
   const [isHovered, setIsHovered] = useState([false], "");
   const [isHoveredS, setIsHoveredS] = useState(false);
   const { t } = useTranslation();
-
+  const navigate = useNavigate()
  
   
 
@@ -33,22 +33,18 @@ function Header() {
               setIsHovered([false, isHovered[1]]);
               setIsHoveredS(false);
             }}
+            onClick={()=>{navigate("/")}}
             className="brightness-0 invert-[1]"
             src={bankLogo}
             alt="bank logo"
           />
           <ul className="text-gray-300 text-[13px] font-extralight flex justify-between items-center gap-5">
             <li
-              onMouseEnter={() => fHover("Store")}
-              className="hover:underline hover:scale-[1.05] transition-all"
-            >
-              {t("header").first}
-            </li>
-            <li
               onMouseEnter={() => fHover("Smth1")}
               className="hover:underline hover:scale-[1.05] transition-all "
+              onClick={()=>{navigate("/pages")}}
             >
-              Smth1
+              Pages
             </li>
             <li
               onMouseEnter={() => fHover("smth2")}

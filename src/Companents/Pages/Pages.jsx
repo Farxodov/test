@@ -74,6 +74,9 @@ function Pages() {
     setNumber(id)
   }, []);
 
+  useEffect(()=>{
+    localStorage.setItem("number",number)
+  },[number])
 
   function click(p) {
     if (p === "minus") {
