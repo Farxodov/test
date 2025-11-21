@@ -8,6 +8,7 @@ import Page5 from "./Page5";
 import Page6 from "./Page6";
 import Page7 from "./Page7";
 import directionLogo from "../../../public/images/next.png";
+import { useNavigation, useParams } from "react-router-dom";
 
 function Pages() {
   const data = [
@@ -53,6 +54,13 @@ function Pages() {
   const [color2, setColor2] = useState(localStorage.getItem("color2"));
   const number_of_charts = 7;
 
+  // const navigate = useNavigation()
+   const { id } = useParams(); // <-- must match the route param name
+
+   
+  
+
+
   useEffect(() => {
     if (!localStorage.getItem("color1") && !localStorage.getItem("color2")) {
       setColor1("blue");
@@ -62,9 +70,10 @@ function Pages() {
       setColor1("#ff0000");
       setColor2("#00ff00");
     }
+
+    setNumber(id)
   }, []);
 
-  useEffect(() => {});
 
   function click(p) {
     if (p === "minus") {
@@ -99,6 +108,8 @@ function Pages() {
 
   return (
     <>
+      {/* <h1 className="text-white text-9xl"> iddd: {id} </h1> */}
+
       <div className="flex justify-around items-center h-[35px]">
         <button
           onClick={() => click("minus")}

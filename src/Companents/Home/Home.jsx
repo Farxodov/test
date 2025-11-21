@@ -1,6 +1,6 @@
 import Header from "./Header";
 import Pages from "../Pages/Pages";
-import { Navigate, Route, Routes } from "react-router-dom";
+import { Navigate, Route, Router, Routes } from "react-router-dom";
 function Home() {
 
   return (
@@ -10,10 +10,10 @@ function Home() {
         <br /> <br /> <br /> 
         {/* --------------- */}
         <div>
-          <Routes>
-            <Route path="/pages" element={<Navigate to="/pages/1" />} />
-            <Route path="/pages/:id" element={<Pages/>} />
-          </Routes>
+            <Routes>
+              <Route path="/pages" element={<Navigate to="/pages/1" />} />
+              <Route path="/pages/:id" element={<Pages/>} />
+            </Routes>
         </div>
         {/* ------------------------- */}
       </div>

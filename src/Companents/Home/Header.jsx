@@ -4,10 +4,14 @@ import "../../CSS/Header.css";
 import Undereheader_s from "./Underheader_s";
 import { useTranslation } from "react-i18next";
 import bankLogo from "../../../public/images/bank.png"
+import { Link, Navigate, useParams } from "react-router-dom";
 function Header() {
   const [isHovered, setIsHovered] = useState([false], "");
   const [isHoveredS, setIsHoveredS] = useState(false);
   const { t } = useTranslation();
+
+ 
+  
 
   function fHover(params) {
     setIsHovered([true, params]);
