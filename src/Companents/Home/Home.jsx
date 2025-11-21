@@ -11,8 +11,8 @@ function Home() {
         {/* --------------- */}
         <div>
             <Routes>
-              <Route path="/pages" element={<Navigate to="/pages/1" />} />
-              <Route path="/pages/:id" element={<Pages/>} />
+              <Route path="https://farxodov.netlify.app/pages" element={<Navigate to="/pages/1" />} />
+              <Route path="https://farxodov.netlify.app/pages/:id" element={<Pages/>} />
             </Routes>
         </div>
         {/* ------------------------- */}
