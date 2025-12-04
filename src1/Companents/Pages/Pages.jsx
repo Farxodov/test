@@ -8,9 +8,11 @@ import Page5 from "./Page5";
 import Page6 from "./Page6";
 import Page7 from "./Page7";
 import directionLogo from "../../../public/images/next.png";
-import { useNavigation, useParams } from "react-router-dom";
+import { Route, useNavigate, useNavigation, useParams } from "react-router-dom";
 
 function Pages() {
+  const navigate = useNavigate();
+
   const data = [
     {
       month: "May",
@@ -54,12 +56,9 @@ function Pages() {
   const [color2, setColor2] = useState(localStorage.getItem("color2"));
   const number_of_charts = 7;
 
-  // const navigate = useNavigation()
-   const { id } = useParams(); // <-- must match the route param name
+  const { id } = useParams(); // <-- must match the route param name
 
-   
-  
-
+  useEffect(()=>{setNumber(id)},[id])
 
   useEffect(() => {
     if (!localStorage.getItem("color1") && !localStorage.getItem("color2")) {
@@ -70,24 +69,24 @@ function Pages() {
       setColor1("#ff0000");
       setColor2("#00ff00");
     }
-
-    setNumber(id)
   }, []);
 
-  useEffect(()=>{
-    localStorage.setItem("number",number)
-  },[number])
+  useEffect(() => {
+    localStorage.setItem("number", number);
+
+    navigate(`/pages/${number}`);
+  }, [number]);
 
   function click(p) {
     if (p === "minus") {
-      if (number !== 1) {
-        setNumber(number - 1);
+      if (Number(number) !== 1) {
+        setNumber(Number(number) - 1);
       } else {
         setNumber(number_of_charts);
       }
     } else {
-      if (number !== number_of_charts) {
-        setNumber(number + 1);
+      if (Number(number) !== number_of_charts) {
+        setNumber(Number(number) + 1);
       } else {
         setNumber(1);
       }
@@ -111,8 +110,6 @@ function Pages() {
 
   return (
     <>
-      {/* <h1 className="text-white text-9xl"> iddd: {id} </h1> */}
-
       <div className="flex justify-around items-center h-[35px]">
         <button
           onClick={() => click("minus")}
@@ -142,9 +139,7 @@ function Pages() {
               </option>
             ))}
           </select>
-          {number == 7 ? (
-            ""
-          ) : (
+          {number !== 7?(
             <>
               <input
                 onChange={(p) => color([true, p])}
@@ -161,7 +156,7 @@ function Pages() {
                 className={`w-[30px] h-[30px] rounded-full border-2 border-gray-700 cursor-pointer shadow-lg transition-transform hover:scale-110`}
               />
             </>
-          )}
+          ) :""}
         </div>
         <button
           onClick={() => click("plus")}

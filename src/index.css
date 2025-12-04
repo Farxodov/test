@@ -1,0 +1,13 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+@import "flowbite/src/themes/default";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+
+@theme{
+    --breakpoint-1xl:1440px;
+    --breakpoint-1md:1000px;
+    --breakpoint-1sm:650px;
+    --breakpoint-b800:800px;
+}

@@ -1,0 +1,18 @@
+{
+  "translation": {
+    "course": "Kurs",
+    "course_of_dollor": "Dollor kursi (oxirgi 12oy)",
+    "cards": "Kartalar",
+    "credit": "Kredit",
+    "bankname": "Bank ismi",
+    "sell": "Sotish",
+    "buy": "Sotib olish",
+    "best_value": "Eng yaxshi narx",
+    "best_buy": "Sotib olish uchun eng yaxshisi",
+    "best_sell": "Sotish uchun eng yaxshisi",
+    "last_course":"Oxirgi kurs bo`yicha:",
+    "search":"Qidiruv",
+    "text_rate": "<a>Dollar kurslari</a> <b>Bugun bir necha valyuta kurslari mavjud, jumladan, dollar:</b> <b>1. Rasmiy kurs — O‘zbekiston Respublikasi Markaziy banki tomonidan tashkil etiladi va har hafta yangilanadi. Hozirda dollarning soʻmga nisbatan rasmiy 1 dollar kursi = 12 640,87 soʻm, 100 dollar kursi = 1 264 087 soʻm.</b> <b>2. Bozor kursi — valyuta bozoridagi real vaziyatga qarab shakllanadi. Ushbu saytda siz ushbu stavkaning o'zgarishi va uning o'rtacha qiymati haqida eng dolzarb ma'lumotlarni topishingiz mumkin. Ayni paytda banklarda 1 dollar taxminan so‘mdan sotilmoqda, so‘mdan xarid qilinmoqda.</b> <b>3. Valyuta kursi — birjalarda ishlatiladi va bizni qiziqtirmaydi.</b>"
+  }
+}
+ 

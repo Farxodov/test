@@ -1,18 +1,27 @@
-import { Route, Routes } from "react-router-dom";
-import Home from "./Companents/Home/Home";
-import i18next from "i18next";
+import { Toaster } from "sonner";
+import { router } from "./utils/navigate";
+import { RouterProvider } from "react-router-dom";
+import "./i18n";
 
 function App() {
-  // i18next.init({
-  //   logger: {
-  //     log: () => {},
-  //     warn: () => {},
-  //     error: () => {},
-  //   },
-  // });
   return (
     <>
-        <Home/>
+      <div className="m-auto">
+        <Toaster
+        position="top-right"
+          toastOptions={{
+            style: {
+              fontSize: "18px",
+              padding: "16px",
+              minWidth: "200px",
+              maxWidth: "500px,"
+            },
+            className: "my-large-toast",
+          }}
+          richColors
+        />
+        <RouterProvider router={router} />
+      </div>
     </>
   );
 }

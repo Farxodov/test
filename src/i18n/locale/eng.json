@@ -1,0 +1,19 @@
+{
+  "translation": {
+    "course": "Exchange",
+    "course_of_dollor": "Exchange of dollor (last 12months)",
+    "cards": "Cards",
+    "credit": "Credit",
+    "bankname": "Bank`s name",
+    "sell": "Sell",
+    "buy": "Buy",
+    "best_value": "Best value",
+    "best_buy": "Best to buy",
+    "best_sell": "Best to sell",
+    "bank": "Bank",
+    "last_course": "Last exchange:",
+    "search":"Search",
+    "text_rate": "<a>Dollar exchange rates</a> <b>Today there are several exchange rates, including the dollar:</b> <b>1. Official rate — is established by the Central Bank of the Republic of Uzbekistan and is updated weekly. Currently, the official dollar to soum exchange rate is 1 dollar = 12 640,87 sum, 100 dollar = 1 264 087 sum.</b> <b>2. Market rate — is formed depending on the real situation on the foreign exchange market. On this site you can find the most up-to-date information about changes in this rate and its average value. Currently, in banks, one dollar is sold for approximately 12,740.00 sum, and bought for 12,640.00 sum.</b> <b>3. Exchange rate — used on exchanges and is not of interest to us.</b>"
+  }
+}
+ 

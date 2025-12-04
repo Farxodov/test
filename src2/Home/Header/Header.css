@@ -1,0 +1,49 @@
+.nav2 {
+  height: 0;
+  overflow: hidden;
+  interpolate-size: allow-keywords;
+  transition: height 0.7s ease;
+}
+.nav1 {
+  height: auto;
+}
+
+.navbar1 *{
+  animation: navbar1Animation 0.7s forwards;
+}
+@keyframes navbar1Animation {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.navbar2 *{
+  animation: navbar1Animation2 0.7s forwards;
+}
+@keyframes navbar1Animation2 {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+
+.cover {
+  background: white;
+  animation: smoothCover 1s forwards;
+  filter: blur(8px);
+}
+
+@keyframes smoothCover {
+  
+  from{
+    opacity: 0;
+  }
+  to{
+    opacity: 0.7;
+  }
+}
